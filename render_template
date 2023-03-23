@@ -11,3 +11,16 @@ template_name=index.html
     <h1>Name:{{name}}</h1> # 用 fstring 
 </body>
 </html>dex.html格式
+
+app.py寫法
+
+from flask import Flask, render_template #加了render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():  #由此可知 router跟function 不須同名
+    return "Hello Flaskbook!"
+@app.route("/name/<name>")
+def show_name(name):
+    return render_template("index.html",name=name) # return temperlate
