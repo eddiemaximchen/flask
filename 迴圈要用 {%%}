@@ -1,0 +1,13 @@
+ex:沒有縮排限制 等於在html中加上jinja2的語法
+
+{% if name %}
+<h1>Name: {{name}}</h1>
+{% else %}
+<h1>Name:</h1>
+{% endif %}
+
+<ul>
+{% for user in users %>
+<li><a href="{{user.url}}">{{user.username}}</a></li>
+{% endfor %}
+</ul>
