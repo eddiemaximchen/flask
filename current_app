@@ -1,0 +1,20 @@
+current_app是一個本地代理，它的類型是werkzeug.local. LocalProxy，它所代理的即是我們的app對象，也就是說current_app == LocalProxy(app)。
+使用current_app是因爲它也是一個ThreadLocal變量，對它的改動不會影響到其他線程。可以通過current_app._get_current_object()方法來獲取app對象。
+current_app只能在請求線程裏存在，因此它的生命週期也是在應用上下文裏，離開了應用上下文也就無法使用。werkzeug = flask's server
+
+current_app的出現是為了解決無窮迴圈的產生
+app=flask(__name__) 如果在app裡做類似system類的操作去呼叫app 就變loop了 所以誕生了app的替身叫current_app
+
+source:https://www.twblogs.net/a/5d4dc815bd9eee5327fc6a8c
+
+from flask import Flask, current_app
+app = Flask('__name__')
+
+@app.route('/')
+def index():
+    return 'Hello, %s!' % current_app.name
+ ＝＝＝＝＝＝>OK<=============================
+但是
+app = Flask('__name__')
+print current_app.name
+
