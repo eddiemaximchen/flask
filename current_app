@@ -18,3 +18,4 @@ def index():
 app = Flask('__name__')
 print current_app.name
 
+會 runtime error 因為沒有def 
