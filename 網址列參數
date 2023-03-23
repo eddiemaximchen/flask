@@ -1,0 +1,2 @@
+@app.route("/hello/<name>") # hello/eddie 跟 html 
+  return {name} #f string method
