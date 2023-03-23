@@ -1,6 +1,6 @@
 template_name=index.html
 放在跟app.py同層的templates資料夾下 資料夾名字不能錯
-<html lang="ja"> # lang =ja
+<html lang="ja"> # lang =ja==>jinja2
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
