@@ -1,0 +1,13 @@
+前後端傳值得機制
+
+設定session
+from flask import session
+session("username")="eddie"
+
+取得session
+from flask import session
+username=session["username"]
+
+刪除cookie
+from flask import session
+session.pop("username",None)
