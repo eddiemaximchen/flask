@@ -1,7 +1,12 @@
-
+<html lang="ja"> 因為有這行 flask才能混在HTML裡
 <body>
 {% with messages = get_flash_messages() %}
-{% if messages %} 在htm
+{% if messages %} 在html裡不用縮排
+<ul>
+  {% for message in messages %}
+  <li class="flash">{{ message }}</li> 一定要有空
+  {% endfor %}
+</ul>
 {% end if %}
 {% end with %} 讓messages變成區域變數
 </body>
