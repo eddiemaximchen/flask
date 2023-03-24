@@ -1,5 +1,7 @@
+
 <body>
 {% with messages = get_flash_messages() %}
-
+{% if messages %} 在htm
+{% end if %}
 {% end with %} 讓messages變成區域變數
 </body>
