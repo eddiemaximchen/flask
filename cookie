@@ -1,0 +1,15 @@
+取得cookie
+from flask import request
+
+username=request.cookies.get("username") 取得key value = username 的 cookie
+
+設定cookie
+from flask import make_response, render_template
+
+response = make_response(render_template("contact.html")) 才知道是哪個page留的
+response.set_cookie("username","eddie") key & value
+
+刪除cookie
+from flask import make_response,render_template,response
+response = make_response(render_template("contact.html")) 才知道是哪個page留的
+response.delete_cookie("username")
