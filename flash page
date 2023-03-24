@@ -1,3 +1,5 @@
 <body>
+{% with messages = get_flash_messages() %}
 
+{% end with %} 讓messages變成區域變數
 </body>
