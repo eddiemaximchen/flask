@@ -1,0 +1,1 @@
+ <form action="{{url_for('contact_complete')}}" method="post" novalidate="novalidate"></form>
