@@ -1,10 +1,23 @@
 from flask import Flask,Blueprint
-from crud import views as crud_views #apps.crud = apps目錄下的crud目錄
+from crud import views as crud_views #apps目錄下的crud目錄
 
+app.py
 def create_app():#不定義route
 
     app=Flask(__name__)#function 還是要縮排
     app.register_blueprint(crud_views.crud,url_prefix="/crud") #url_prefix=@app.route("/crud")
-    sample = Blueprint(__name__,static_folder="static",template_folder="templates",url_prefix="/sample",subdomain="example")
     #register_blueprint 若跟 Blueprint 指定相同變數時 以register_blueprint為優先
     return app
+
+view.py
+from flask import Blueprint,render_template
+
+crud=Blueprint(
+    "crud",
+    __name__,
+    template_folder="templates",
+    static_folder="static",
+)
+@crud.route("/")
+def index():
+    return render_template("crud/index.html")
