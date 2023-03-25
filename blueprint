@@ -1,0 +1,2 @@
+根目錄下有多套使用template的blueprint時 每一套templates之下都要再建一個blueprint的app目錄
+blueprintA-->apps templates之下要包一個apps目錄==>apps==>templates==>apps==>templates file
