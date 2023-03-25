@@ -1,0 +1,8 @@
+from flask import Flask
+from apps.crud import views as crud_views #apps.crud = apps目錄下的crud目錄
+
+def create_app():#不定義route
+
+    app=Flask(__name__)#function 還是要縮排
+    app.register_blueprint(crud_views.crud,url_prefix="/crud") #url_prefix=@app.route("/crud")
+    return app
