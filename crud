@@ -1,5 +1,5 @@
 from flask import Flask,Blueprint
-from apps.crud import views as crud_views #apps.crud = apps目錄下的crud目錄
+from crud import views as crud_views #apps.crud = apps目錄下的crud目錄
 
 def create_app():#不定義route
 
