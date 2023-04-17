@@ -17,4 +17,12 @@ def qq():
   3.application/xml
   4.application/json
   
+  網頁對不同 content type的處裡
+  
+  response.text() - 純 文字 or html             
+  response.blob() - 通常用於 base64 編碼後的 img 內容
+  response.json() - 若回傳的格式為 json 文字，自動轉成物件 (Object)
+  
+  
+  
   所有類別：https://www.iana.org/assignments/media-types/media-types.xhtml
