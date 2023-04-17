@@ -1,0 +1,18 @@
+from flask import Flask,make_response,json
+@app.route("/")
+def qq():
+  #已經是 json 格式
+  data={
+        'name':'eddie',
+        'gender':'male'
+       }
+       response = make_response(json.dumps(data))
+       response.mimetype="application/json"
+       return response
+       
+ 非 json 格式
+ 
+ from flask import jsonify
+ @app.route("/")
+def qq():
+  return jsonify(message='Error!)
