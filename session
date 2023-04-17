@@ -1,4 +1,4 @@
-前後端傳值得機制
+前後端傳值的機制 （安全的cookie)
 
 設定session
 from flask import session
@@ -11,3 +11,11 @@ username=session["username"]
 刪除cookie
 from flask import session
 session.pop("username",None)
+
+session可以設置加密機制
+在.env 中加入
+
+SECRET_KEY=fdssd fsdf #可以有空格
+
+import os
+app.secret_key=os.getenv('fdssd fsdf','wrong') # wrong 為 key 值時的預設回應
