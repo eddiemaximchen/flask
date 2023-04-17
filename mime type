@@ -1,0 +1,20 @@
+response的type <head>裡的content type
+
+from flask import make_response
+@app.route("/")
+def qq():
+  response=make_response('hi')
+  
+  法一：
+  response.mimetype="text/plain"
+  
+  法二：多了字元集的設定
+  response.header['Content-type']='text/plain;charset=utf-8'
+  
+  content type 純文字類別
+  1.text/plain
+  2.text/html
+  3.application/xml
+  4.application/json
+  
+  所有類別：https://www.iana.org/assignments/media-types/media-types.xhtml
