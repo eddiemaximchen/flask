@@ -1,0 +1,1 @@
+在def上面加 @app.cli.command() 
