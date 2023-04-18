@@ -1,0 +1,3 @@
+html header 有http_referer紀錄來源網址
+
+return redirect(request.referrrer)即可回到上一
