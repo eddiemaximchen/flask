@@ -7,13 +7,14 @@ app=flask(__name__) 如果在app裡做類似system類的操作去呼叫app 就�
 
 source:https://www.twblogs.net/a/5d4dc815bd9eee5327fc6a8c
 
-from flask import Flask, current_app
-app = Flask('__name__')
+法一                                                  法二
+from flask import Flask, current_app                 from flask import Flask,current_app
+app = Flask('__name__')                              app = Flask('__name__')
 
-@app.route('/')
-def index():
-    return 'Hello, %s!' % current_app.name
- ＝＝＝＝＝＝>OK<=============================
+@app.route('/')                                      app_ctx=app.app_context()
+def index():                                         app_ctx.push() #創造上下文
+    return 'Hello, %s!' % current_app.name           current_app.name
+ ＝＝＝＝＝＝>OK<=============================         app_ctx.pop()  #上下文
 但是
 app = Flask('__name__')
 print current_app.name
