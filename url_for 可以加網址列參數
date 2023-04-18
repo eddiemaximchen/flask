@@ -1,0 +1,13 @@
+example:
+
+from flask import request
+@app.route("/")
+def qq():
+  return url_for('hello', next=request.full_path)  #設置網址列參數 next
+  
+  
+@app.route("/get")
+def get():
+  return redirect(request.args.get('next',url_for('/hello')))  # 取得網址列參數 next 並設置 next 
+  
+  
