@@ -1,0 +1,10 @@
+from urllib.parse import urlparse, urljoin
+from flask import request
+
+def is_safe_url(target):
+  ref_url=urlparse(request.host_url)  #獲取程式內的本機 url
+  test_url=urlparse(urljoin(request.host_url,target))  #將 target加上主機名稱轉為絕對路徑
+  return test_url.scheme in ('http','https") and \    #scheme 指的是 http or https 所以如果參數中的scheme不在兩者之內就不正常
+    ref_url.netloc==test_url.netloc         # netloc 是來源網址 不含參數
+    
+    #也就是請求位址須為 http or https 且與 本機 url 
