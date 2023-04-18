@@ -1,1 +1,5 @@
 如果直接用網址列參數來當 SQL 參數 那竄改過的參數就可經由 SQL 
+
+f'select * from student where password={password}' 
+
+password=''; drop table students; --; # '';為斷句 然後插入惡意 SQL  --
