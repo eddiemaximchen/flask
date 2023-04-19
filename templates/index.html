@@ -14,7 +14,7 @@
     {% else %}
         <i>This user do not have bio</i>
     {% endif %}
-    <h5>{{user.username}}'s watchlist({{ movies|length }}):</h5>
+    <h5>{{user.username}}'s watchlist({{ movies|length }}):</h5> # filter = movie.length
     <u1>
         {% for movie in movies %}
             <li>{{movie.name}} - {{ movie.year}}</1i>
