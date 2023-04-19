@@ -5,3 +5,12 @@ http://example.com/hello?name=<script>alert('Bingo');</script>
 flask 如果直接傳到客戶端會變成 <h1>hello,<script>alert('Bingo')</script></h1>
 
 化解攻擊的方法是escape 把這些文字變成純文字 就會有殺傷力
+
+ex: 
+
+from jinja2 import escape
+
+@app.route('/hello')
+def hello():
+  name=request.args.get('name')
+  response='<h1>hello, %s!<h1>% escape(name)
