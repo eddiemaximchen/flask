@@ -10,6 +10,7 @@
     <li>Global: {{ bar() }}</li>
     <li>Test: {% if name is baz %}I am baz.{% endif %}</li>
     <li>Macro: {{ qux(amount=1) }}</li>
+    #flask 還是讀的到被 comment 的 html 
     <!-- <li><a href="{{ url_for('watchlist_with_static') }}">Watchlist with image and styles.</a></li> -->
     <!-- <li><a href="{{ url_for('just_flash') }}">Flash something</a></li> -->
 </ul>
