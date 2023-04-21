@@ -14,7 +14,7 @@ def basic():
     if request.method=="POST" and form.validate():
         username = form.username.data
         return 'ok'
-    return render_template('basic.html',form=form,username=username)
+    return render_template('basic.html',form=form)
 
 
 if __name__ == '__main__':
