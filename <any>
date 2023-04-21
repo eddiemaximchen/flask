@@ -1,0 +1,5 @@
+@app.route('/color/<any(blue,red,white):color>') #color 要 match def的變數名
+def threee_colors(color):
+    return 'needs to be blue,red,or white'
+    
+#color/後的值 只能填 blue,red,white 否則
