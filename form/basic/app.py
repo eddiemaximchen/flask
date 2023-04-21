@@ -11,7 +11,7 @@ username={
 @app.route('/basic',methods=['GET','POST'])
 def basic():
     form=LoginForm()
-    if request.method=="POST" and form.validate():
+    if request.methods=="POST" and form.validate():
         username = form.username.data
         return 'ok'
     return render_template('basic.html',form=form)
