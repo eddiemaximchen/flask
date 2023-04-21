@@ -1,0 +1,5 @@
+from urllib.parse import urlparse,urljoin
+def is_safe_url(target):
+    ref_url=urlparse(request.host_url) #內部url
+    test_url=urlparse(urljoin(request.host_url,target)) #把target改成絕對路徑
+    return test_url.scheme in ('http','https') and ref_url.netloc==test_url.netloc  #看是不是http開頭還有兩者內部路徑是否相同
