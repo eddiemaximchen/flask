@@ -1,0 +1,9 @@
+@app.before_request
+def do_something():
+    print('before request')
+
+
+@app.after_request
+def hh(res):        # def一定要參數而且回傳
+    print('after_requst')
+    return res
