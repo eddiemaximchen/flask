@@ -1,0 +1,14 @@
+@app.route('/json1')
+def json1():
+    data={
+        'name':'eddie',
+        'gender':'male',
+        'message':'this is json'
+    }
+    response=make_response(json.dumps(data))
+    response.mimetype='application/json'
+    return response
+
+@app.route('/jsonify1')
+def jsonify1():
+    return jsonify(name='eddie',gender='male',message='this is json')
