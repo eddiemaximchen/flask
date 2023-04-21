@@ -1,0 +1,6 @@
+@app.cli.command()
+def gg():
+  print('hi')
+  
+ 可以執行 flask gg 得到 command line 的 hi
+ 
