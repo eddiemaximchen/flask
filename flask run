@@ -1,1 +1,2 @@
-flask run 跟著.env的folder跑 
+flask run --host=0.0.0.0  # 任何網址都能造訪
+flask run --port=8000 #改port
