@@ -1,0 +1,17 @@
+程式啟動時會啟動 context
+
+但是如果要在後端用 context 做事 要手動啟動
+
+啟動的方法
+
+from flask import current_app
+
+with app.app_context(): ＃ with current_app
+    print('context is '+current_app.name)
+   
+=====================================
+
+app_ctx=app.app_context() #
+app_ctx.push()
+print('push ' +current_app.name
+app_ctx.pop()
