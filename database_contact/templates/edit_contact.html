@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import form_field %}
+
+{% block title %}Edit Contact{% endblock %}
+
+{% block content %}
+<h2>Edit Contact</h2>
+
+<form method="post">
+    {{ form.csrf_token }}
+    {{ form_field(form.phone_number, rows=1, cols=10) }}
+    {{ form.submit }}<br>
+</form>
+{% endblock %}
