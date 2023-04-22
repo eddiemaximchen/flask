@@ -1,0 +1,5 @@
+from flask import Markup
+
+@app.template_filter()
+def musical(s):
+  return s +Markup('123')
