@@ -1,0 +1,12 @@
+app.py
+
+@app.template_global()
+def bar():            #定義函數
+    return 'I am bar.'
+    
+
+網頁上使用 一定要加tag 
+
+<p>{{bar()}}</p>
+
+會出現 i am bar
