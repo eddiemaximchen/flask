@@ -1,0 +1,10 @@
+from albumy.settings import config
+
+
+def create_app(config_name=None):  ＃create_app 是界面 產生 app class 回傳值 
+    if config_name is None:
+        config_name = os.getenv('FLASK_CONFIG', 'development')
+
+    app = Flask('albumy')
+    
+    app.config.from_object(config[config_name])
