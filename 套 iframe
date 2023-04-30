@@ -1,0 +1,12 @@
+html:
+<iframe src="http://127.0.0.1:5000/iframe"></iframe>
+
+py:
+@app.route('/')
+def index():
+    iframe="http://127.0.0.1:5000/iframe"
+    return render_template('index.html',iframe=iframe)
+    
+@app.route("/iframe")
+def iframe():
+  return render_template('iframe.html')
