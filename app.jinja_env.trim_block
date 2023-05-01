@@ -1,0 +1,3 @@
+#以下兩者都只是讓排版好看
+app.jinja_env.trim_blocks = True # 去掉html中 jinja造成的空格
+app.jinja_env.lstrip_blocks = True #去掉html中 jinja造成的空格
