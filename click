@@ -1,7 +1,7 @@
 安装
 pip install click
 使用
-装饰一个函数，使之称为命令行接口
+装饰一个函数，使之称为命令行接口 就是能使用 command line 
 @click.command()
 - 装饰函数，为其添加命令行选项
 @click.option()
