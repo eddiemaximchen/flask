@@ -1,0 +1,14 @@
+from flask import Flask
+from flask_bootstrap import Bootstrap
+from flask_sqlalchemy import SQLAlchemy
+from jinja2.environment import LSTRIP_BLOCKS
+import views, errors, commands
+# from sayhello import views, errors, commands py在sayhello目錄下才要加from sayhello
+app=Flask('sayhello')
+
+app.config.from_pyfile('settings.py')
+app.jinja_env.trim_blocks = True # 去掉html中 jinja造成的空格
+app.jinja_env.lstrip_blocks = True
+
+db = SQLAlchemy(app)
+bootstrap = Bootstrap(app)
