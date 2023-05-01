@@ -7,4 +7,4 @@ app=Flask(__name__)
 def index():
     return "hello index"
 
-app.register_blueprint(app2)
+app.register_blueprint(app2) 
