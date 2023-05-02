@@ -1,0 +1,2 @@
+FLASK_APP=guesslog
+FLASK_ENV=development
